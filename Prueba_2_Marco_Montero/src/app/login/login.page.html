@@ -1,0 +1,48 @@
+
+
+<ion-content>
+  <br><br>
+  <ion-grid fixed>
+    <ion-row><ion-col size="2">
+    </ion-col>
+      <ion-col size="8">
+        <ion-label>
+          <ion-img [src]="['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Open_Source_Initiative_keyhole.svg/1200px-Open_Source_Initiative_keyhole.svg.png']"></ion-img>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <form [formGroup]="formulario" (ngSubmit)="iniciarSesion()">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label>Usuario</ion-label>
+          <ion-input formControlName="username" type="text" placeholder="Ingrese su nombre de usuario"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label>Contraseña</ion-label>
+          <ion-input formControlName="password" type="password" placeholder="Ingrese su contraseña"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>Recuerdame</ion-label>
+            <ion-toggle formControlName="recordar" slot="end"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button type="submit" expand="full" shape="round">
+            Iniciar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

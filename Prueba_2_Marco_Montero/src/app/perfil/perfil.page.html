@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <br>
+    <br>
+    <ion-title class="ion-text-center">Bienvenido</ion-title>
+    <ion-label>
+      <ion-button [routerLink]="['/login']" fill="clear" shape="round" slot="start">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Salir
+      </ion-button>
+    </ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">
+      {{ auth.datosUsuario?.firstName }}
+      <br>
+      {{ auth.datosUsuario?.lastName }}
+      <br>
+      {{ auth.datosUsuario?.email }}
+    </ion-label>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <br>
+    <ion-label position="stacked">
+      <ion-title position="stacked" class="ion-text-center">Catálogo</ion-title>
+    </ion-label>
+    <ion-label>
+      <ion-button [routerLink]="['/perfil']" fill="clear" shape="round" slot="start">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Perfil
+      </ion-button>
+    </ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let p of prod.datosProd?.products">
+      <ion-avatar slot="start">
+        <img [src]="p.images[0] " />
+      </ion-avatar>
+      <ion-label position="stacked">
+        <h6>
+          {{ p.title }}
+        </h6>
+        <p>
+          $ {{ p.price }}
+          <br>
+          % {{ p.discountPercentage }}
+        </p>
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
